@@ -24,7 +24,6 @@
             background: var(--background-light);
             color: var(--text-color);
             text-align: center;
-            overflow: hidden;
             position: relative;
         }
         .card {
@@ -163,6 +162,51 @@
             0% { top: -10%; opacity: 1; }
             100% { top: 110%; opacity: 0.5; }
         }
+
+        /* تعديلات التصميم المتجاوب */
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .card {
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                max-width: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .sub-heading {
+                font-size: 1em;
+            }
+            .form-group input, .form-group select {
+                padding: 10px 10px 10px 40px;
+                font-size: 0.95em;
+            }
+            .form-group .icon {
+                top: 40px;
+                left: 10px;
+            }
+            .step-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .share-button {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+            .gender-options {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .gender-options label {
+                margin-bottom: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -271,8 +315,11 @@
         setInterval(createMoney, 300);
 
         // روابط ورسائل المشاركة
-        var referralLink = encodeURIComponent("https://2255ha1.github.io/Channel-Support-Project-/");
-        var message = encodeURIComponent("انضم إلينا في برنامج المساعدات المالية! سجل الآن في منظمة الامل من خلال هذا الرابط: " + https://linksshortcut.com/iJmuB);
+        var referralLink = "https://2255ha1.github.io/Channel-Support-Project-/";
+
+     
+           var message = encodeURIComponent("هل تبحث عن مساعدة مالية؟ انضم إلى مؤسسة الأمل الآن وسجل بياناتك للحصول على المساعدة. اضغط على الرابط: " + referralLink);
+
 
         // عند إرسال نموذج التسجيل (الخطوة 1)
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -317,4 +364,5 @@
         });
     </script>
 </body>
-</html>
+    </html>
+    
