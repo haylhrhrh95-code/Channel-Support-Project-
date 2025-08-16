@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة الأمل للمساعدات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ألوان وأنماط المنظمات الخيرية */
+        :root {
+            --primary-color: #00796b; /* أخضر مائي داكن */
+            --secondary-color: #4db6ac; /* أخضر مائي فاتح */
+            --background-light: #e0f2f1; /* أخضر فاتح جداً للخلفية */
+            --text-color: #37474f; /* لون نص داكن */
+            --card-bg: #ffffff; /* خلفية البطاقة */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: var(--background-light);
+            color: var(--text-color);
+            text-align: center;
+            position: relative;
+        }
+        .main-container {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 90%;
+            transition: transform 0.3s ease-in-out;
+            z-index: 10;
+        }
+        .main-container:hover {
+            transform: translateY(-5px);
+        }
+        .icon-container {
+            font-size: 60px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .icon-row i {
+            font-size: 45px;
+            color: var(--secondary-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .sub-heading {
+            color: var(--text-color);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .action-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            width: auto;
+            transition: background-color 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .action-button:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        /* تأثيرات إضافية */
+        .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--secondary-color), transparent);
+            opacity: 0.1;
+            animation: wave 10s linear infinite alternate;
+        }
+        @keyframes wave {
+            from { transform: translateX(-10%); }
+            to { transform: translateX(10%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="icon-container">
+            <i class="fas fa-hands-helping"></i>
+        </div>
+        <h1>أهلاً بك في مؤسسة الأمل</h1>
+        <p class="sub-heading">
+            نحن مؤسسة خيرية مكرسة لتقديم المساعدات المالية والإنسانية للعائلات المحتاجة. هدفنا هو نشر الأمل وتقديم الدعم لمن هم في أمس الحاجة إليه، والمساهمة في بناء مستقبل أفضل للجميع.
+        </p>
+        <div class="icon-row">
+            <i class="fas fa-hand-holding-heart"></i>
+            <i class="fas fa-users"></i>
+            <i class="fas fa-hands-helping"></i>
+        </div>
+        <a href="register.html" class="action-button">
+            ابدأ التسجيل الآن
+        </a>
+    </div>
+
+    <div class="wave-animation"></div>
+</body>
+</html>
